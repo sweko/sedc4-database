@@ -1,5 +1,4 @@
 --Which book titles occurs more than once
-
 select * from Novels 
 where Title in (
 	select Title
@@ -28,3 +27,5 @@ from Authors a
 	inner join Awards aw on aw.ID = n.AwardID
 where aw.AwardName = 'Nebula'
 group by a.Name) t1
+
+-- 

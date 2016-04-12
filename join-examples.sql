@@ -1,3 +1,10 @@
+Alter table Nominations
+	alter column IsWinner bit null
+	
+update Nominations
+set IsWinner = null
+where AwardID = 2 and YearNominated = 2015
+
 select * 
 from Authors a
 	inner join Novels b on a.ID = b.AuthorID
